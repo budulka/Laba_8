@@ -1,0 +1,3 @@
+C:/Users/Budulka/CLionProjects/Laba 8/cmake-build-debug/CMakeFiles/Laba_8.dir
+C:/Users/Budulka/CLionProjects/Laba 8/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Budulka/CLionProjects/Laba 8/cmake-build-debug/CMakeFiles/rebuild_cache.dir
