@@ -49,7 +49,6 @@ int main() {
     system("chcp 65001");
     system("cls");
     text();
-    char a[20];
     do {
         RLC_Circuit newCircuit;
         int chosenCircuit = 0;
@@ -84,7 +83,7 @@ void calculateRLC2(complex *Numerator, complex *Denominator, RLC_Circuit circuit
 }
 
 void calculateRLC3(complex *Numerator, complex *Denominator, RLC_Circuit circuit3) {
-    Numerator->real = circuit3.resistance[0] * circuit3.resistance[1];
+    (*Numerator).real = circuit3.resistance[0] * circuit3.resistance[1];
     Numerator->imag = circuit3.resistance[0] *
                       (circuit3.angularFrequency * circuit3.inductance -
                        (1.0 / (circuit3.angularFrequency * circuit3.capacitance)));
@@ -127,7 +126,7 @@ void calculateInRange(RLC_Circuit *circuit, void (*f)(complex *, complex *, RLC_
 }
 
 void choosingCircuit(int *a) {
-    printf("Choose a circuit");
+    printf("\033[32mChoose a circuit:");
     while (scanf("%d", a) != 1 || getchar() != '\n' || *a > 4 || *a < 1) {
         fflush(stdin);
         printf("Invalid input! Enter a positive int number!");
